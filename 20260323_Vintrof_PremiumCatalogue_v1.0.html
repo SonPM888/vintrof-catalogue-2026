@@ -261,9 +261,10 @@
 
         .about-stats {
             flex: 2;
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: var(--sp-md);
+            align-content: center;
         }
 
         .stat-card {
@@ -812,6 +813,44 @@
     </style>
     <style media="screen">
         /* Web Presentation Mode (Ignored by @media print/PDF) */
+
+        /* Floating Download PDF Button */
+        .download-fab {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 9999;
+            background: linear-gradient(135deg, var(--accent-gold), #b8922f);
+            color: #0f1923;
+            text-decoration: none;
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 1px;
+            padding: 16px 28px;
+            border-radius: 50px;
+            box-shadow: 0 8px 24px rgba(212, 169, 63, 0.35);
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .download-fab:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 12px 32px rgba(212, 169, 63, 0.5);
+        }
+        .download-fab svg {
+            width: 20px;
+            height: 20px;
+        }
+        @media (max-width: 768px) {
+            .download-fab {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 12px 20px;
+                font-size: 13px;
+            }
+        }
         html {
             scroll-snap-type: y mandatory;
             background: #050510;
@@ -1611,6 +1650,12 @@
         </div>
         <div class="page-num">14</div>
     </div>
+
+    <!-- Floating Download PDF Button (screen only) -->
+    <a class="download-fab" href="20260323_Vintrof_PremiumCatalogue_v1.0.pdf" download>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
+        Download PDF
+    </a>
 
 </body>
 
