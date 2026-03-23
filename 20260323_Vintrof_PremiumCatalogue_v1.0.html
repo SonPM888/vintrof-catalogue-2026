@@ -171,6 +171,23 @@
             line-height: 1.1;
         }
 
+        /* PDF/Print Fallbacks */
+        @media print {
+            .cover h1 {
+                background: none !important;
+                -webkit-text-fill-color: #fff !important;
+                color: #fff !important;
+                background-clip: unset !important;
+            }
+            .spec-item {
+                backdrop-filter: none !important;
+                background: rgba(255, 255, 255, 0.1) !important;
+            }
+            .download-fab {
+                display: none !important;
+            }
+        }
+
         .cover .subtitle {
             font-size: 25px;
             font-weight: 300;
@@ -887,6 +904,11 @@
         ::-webkit-scrollbar-track { background: #050510; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #555; }
+    </style>
+    <style>
+        @media print {
+            .download-fab { display: none !important; }
+        }
     </style>
 </head>
 
