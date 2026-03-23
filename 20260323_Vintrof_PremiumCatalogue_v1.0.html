@@ -183,8 +183,19 @@
                 backdrop-filter: none !important;
                 background: rgba(255, 255, 255, 0.1) !important;
             }
-            .download-fab {
+            .spec-label {
+                opacity: 1 !important;
+                color: #aaa !important;
+            }
+            .spec-value {
+                opacity: 1 !important;
+                color: #fff !important;
+            }
+            .download-fab, .download-fab svg {
                 display: none !important;
+                visibility: hidden !important;
+                width: 0 !important;
+                height: 0 !important;
             }
         }
 
@@ -1674,8 +1685,8 @@
     </div>
 
     <!-- Floating Download PDF Button (screen only) -->
-    <a class="download-fab" href="20260323_Vintrof_PremiumCatalogue_v1.0.pdf" download>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
+    <a class="download-fab" href="20260323_Vintrof_PremiumCatalogue_v1.0.pdf" download style="display: flex;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
         Download PDF
     </a>
 
