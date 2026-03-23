@@ -1,4 +1,4 @@
-:HL["/vintrof-catalogue-2026/_next/static/chunks/0jphq5mm4o282.css","style"]
+:HL["/vintrof-catalogue-2026/_next/static/chunks/0qw1p0c08.y_~.css","style"]
 :HL["/vintrof-catalogue-2026/_next/static/media/b4e85636e2ca4056-s.p.0c3c6tp9xl371.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/vintrof-catalogue-2026/_next/static/media/e8f2fbee2754df70-s.p.0fzkl03jw-sdz.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/vintrof-catalogue-2026/assets/images/hero_export.png","image"]
@@ -13,4 +13,4 @@
 :HL["/vintrof-catalogue-2026/assets/products/dried_papaya.png","image"]
 :HL["/vintrof-catalogue-2026/assets/products/fruit_juice_concentrate.png","image"]
 :HL["/vintrof-catalogue-2026/assets/images/logistics_cargo.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"tp1DRMQc0WHmC9iHRBB7a"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"P-43GgjoA_T1g-yo-SF3b"}
