@@ -8,20 +8,20 @@
 
         /* ===== DESIGN TOKENS ===== */
         :root {
-            /* Colors — hardcoded from company_context.json */
-            --bg-primary: #0f1923;
-            --bg-secondary: #1a2d3d;
-            --bg-tertiary: #0d2137;
-            --bg-light: #f8f9fa;
-            --text-primary: #e8ecf0;
-            --text-dark: #1a2d3d;
-            --text-muted: #E2E8EE;
-            --text-dim: #C5CBD2;
-            --accent-red: #c22731;
-            --accent-gold: #d4a93f;
-            --accent-green: #2d8659;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.08);
+            /* Colors — Light Mode Promax */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f4f7f6;
+            --bg-tertiary: #e2e8f0;
+            --bg-light: #ffffff;
+            --text-primary: #0f172a;
+            --text-dark: #020617;
+            --text-muted: #334155;
+            --text-dim: #64748b;
+            --accent-red: #ea580c;
+            --accent-gold: #10b981;
+            --accent-green: #059669;
+            --glass-bg: rgba(255, 255, 255, 0.6);
+            --glass-border: rgba(0, 0, 0, 0.08);
 
             /* Spacing — 8px grid */
             --sp-xs: 4px;
@@ -38,7 +38,7 @@
         .cover-bg-gradient {
             position: absolute; top: 0; left: 0; right: 0; bottom: 0;
             background-color: var(--bg-primary);
-            background-image: linear-gradient(to right, rgba(15, 25, 35, 0.95) 0%, rgba(15, 25, 35, 0.4) 100%), url('https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=2670&auto=format&fit=crop');
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.4) 100%), url('https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=2670&auto=format&fit=crop');
             background-size: cover;
             background-position: center right;
             z-index: 0;
@@ -46,7 +46,7 @@
         .cover-content {
             border-left: 4px solid var(--accent-gold);
             padding-left: 40px;
-            background: linear-gradient(90deg, rgba(15,25,35,0.8) 0%, rgba(15,25,35,0) 100%);
+            background: linear-gradient(90deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 100%);
         }
 
 
@@ -164,7 +164,7 @@
             font-weight: 700;
             letter-spacing: 3px;
             margin-bottom: var(--sp-md);
-            background: linear-gradient(135deg, #fff 0%, var(--accent-gold) 100%);
+            background: linear-gradient(135deg, var(--text-dark) 0%, var(--accent-gold) 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -371,7 +371,7 @@
         }
 
         .dark .product-name {
-            color: #fff;
+            color: var(--text-primary);
         }
 
         .light .product-name {
@@ -457,8 +457,9 @@
         }
 
         .light .highlight-tag {
-            background: var(--bg-secondary);
-            color: #fff;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent-gold);
+            border: 1px solid rgba(16, 185, 129, 0.2);
         }
 
         /* MOQ / Pricing — B2B specific */
@@ -515,7 +516,7 @@
         }
 
         .certs-page .section-header h2 {
-            color: #fff;
+            color: var(--text-primary);
         }
 
         .certs-grid {
@@ -700,7 +701,7 @@
         }
 
         .season-page .section-header h2 {
-            color: #fff;
+            color: var(--text-primary);
         }
 
         .season-table {
@@ -729,7 +730,7 @@
         .season-table td:first-child {
             text-align: left;
             font-weight: 600;
-            color: #fff;
+            color: var(--text-primary);
             font-size: 19px;
             min-width: 160px;
         }
@@ -773,6 +774,35 @@
             font-size: 15px;
             color: var(--text-dim);
             letter-spacing: 2px;
+        }
+
+        /* ═══════════════════════════════════
+           MOBILE RESPONSIVENESS (WEB ONLY)
+           ═══════════════════════════════════ */
+        @media screen and (max-width: 768px) {
+            .page {
+                height: auto !important;
+                aspect-ratio: auto !important;
+                margin-bottom: 2rem !important;
+                padding: 1rem !important;
+            }
+            .cover h1 { font-size: 44px !important; line-height: 1.2 !important; }
+            .cover .subtitle { font-size: 16px !important; letter-spacing: 4px !important; }
+            .about-grid, .product-page { flex-direction: column !important; }
+            .about-text, .about-stats, .product-visual, .product-info { 
+                flex: none !important; width: 100% !important; padding: 1rem 0 !important; 
+            }
+            .contact-grid { 
+                grid-template-columns: 1fr !important; 
+            }
+            .certs-grid { grid-template-columns: 1fr 1fr !important; }
+            .why-grid { grid-template-columns: 1fr !important; }
+            .product-name { font-size: 36px !important; }
+            .product-visual img { width: 90% !important; }
+            .section-header h2 { font-size: 36px !important; }
+            .cover, .about, .product-page, .certs-page, .why-page, .season-page, .contact-page {
+                padding: 2rem 1rem !important;
+            }
         }
     </style>
     <style media="screen">
@@ -858,7 +888,7 @@
         </div>
         <div class="about-grid">
             <div class="about-text">
-                <p>VINTROF CO., LTD is a premier Vietnamese trading company specializing in high-quality soft dried tropical fruits and fruit juice concentrates for the global market.</p><p>With 500+ tấn/năm annual capacity sourced from 5 certified suppliers across Vietnam, we deliver to 9 international markets including Japan, South Korea, EU, USA, and the Middle East.</p><p>Our advanced soft drying and freeze-drying technologies preserve 95% of natural nutrients, while our comprehensive certification portfolio (ISO 22000, HACCP, BRC, IFS, FDA, HALAL, GlobalGAP, GMP) guarantees the highest international food safety standards.</p>
+                <p>VINTROF CO., LTD is a premier Vietnamese trading company specializing in high-quality soft dried tropical fruits and fruit juice concentrates for the global market.</p><p>With 500+ MT/year annual capacity sourced from 5 certified suppliers across Vietnam, we deliver to 9 international markets including Japan, South Korea, EU, USA, and the Middle East.</p><p>Our advanced soft drying and freeze-drying technologies preserve 95% of natural nutrients, while our comprehensive certification portfolio (ISO 22000, HACCP, BRC, IFS, FDA, HALAL, GlobalGAP, GMP) guarantees the highest international food safety standards.</p>
             </div>
             <div class="about-stats">
                 <div class="stat-card">
@@ -1069,7 +1099,7 @@
         <div class="dot-pattern"></div>
         <div class="product-visual">
             
-            <img src="/Users/sonpm/Antigravity_Workspace/projects_business/Export_Company/assets/products/dried_mango.png" alt="Soft Dried Mango">
+            <img src="assets/products/optimized/dried_mango.webp" alt="Soft Dried Mango">
             
         </div>
         <div class="product-info">
@@ -1122,7 +1152,7 @@
         <div class="dot-pattern"></div>
         <div class="product-visual">
             
-            <img src="/Users/sonpm/Antigravity_Workspace/projects_business/Export_Company/assets/products/dried_jackfruit.png" alt="Soft Dried Jackfruit">
+            <img src="assets/products/optimized/dried_jackfruit.webp" alt="Soft Dried Jackfruit">
             
         </div>
         <div class="product-info">
@@ -1175,7 +1205,7 @@
         <div class="dot-pattern"></div>
         <div class="product-visual">
             
-            <img src="/Users/sonpm/Antigravity_Workspace/projects_business/Export_Company/assets/products/dried_banana.png" alt="Soft Dried Banana">
+            <img src="assets/products/optimized/dried_banana.webp" alt="Soft Dried Banana">
             
         </div>
         <div class="product-info">
@@ -1228,7 +1258,7 @@
         <div class="dot-pattern"></div>
         <div class="product-visual">
             
-            <img src="/Users/sonpm/Antigravity_Workspace/projects_business/Export_Company/assets/products/dried_dragon_fruit.png" alt="Dried Dragon Fruit">
+            <img src="assets/products/optimized/dried_dragon_fruit.webp" alt="Dried Dragon Fruit">
             
         </div>
         <div class="product-info">
@@ -1281,7 +1311,7 @@
         <div class="dot-pattern"></div>
         <div class="product-visual">
             
-            <img src="/Users/sonpm/Antigravity_Workspace/projects_business/Export_Company/assets/products/dried_pineapple.png" alt="Dried Pineapple">
+            <img src="assets/products/optimized/dried_pineapple.webp" alt="Dried Pineapple">
             
         </div>
         <div class="product-info">
@@ -1334,7 +1364,7 @@
         <div class="dot-pattern"></div>
         <div class="product-visual">
             
-            <img src="/Users/sonpm/Antigravity_Workspace/projects_business/Export_Company/assets/products/dried_passion_fruit.png" alt="Dried Passion Fruit">
+            <img src="assets/products/optimized/dried_passion_fruit.webp" alt="Dried Passion Fruit">
             
         </div>
         <div class="product-info">
@@ -1387,7 +1417,7 @@
         <div class="dot-pattern"></div>
         <div class="product-visual">
             
-            <img src="/Users/sonpm/Antigravity_Workspace/projects_business/Export_Company/assets/products/dried_papaya.png" alt="Dried Papaya">
+            <img src="assets/products/optimized/dried_papaya.webp" alt="Dried Papaya">
             
         </div>
         <div class="product-info">
@@ -1440,7 +1470,7 @@
         <div class="dot-pattern"></div>
         <div class="product-visual">
             
-            <img src="/Users/sonpm/Antigravity_Workspace/projects_business/Export_Company/assets/products/juice_concentrate.png" alt="Fruit Juice Concentrate">
+            <img src="assets/products/optimized/juice_concentrate.webp" alt="Fruit Juice Concentrate">
             
         </div>
         <div class="product-info">
@@ -1561,7 +1591,7 @@
                 </div>
                 <div class="contact-card">
                     <div class="icon">📍</div>
-                    <div class="value">Tầng 8 Tòa nhà AC, số 3/78 Duy Tân, Phường Cầu Giấy, Thành Phố Hà Nội, Việt Nam</div>
+                    <div class="value">8th Floor, AC Building, 3/78 Duy Tan, Cau Giay District, Hanoi, Vietnam</div>
                     <div class="label">Address</div>
                 </div>
                 <div class="contact-card">
