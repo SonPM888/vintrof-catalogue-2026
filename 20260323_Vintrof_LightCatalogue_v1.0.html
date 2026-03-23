@@ -171,6 +171,34 @@
             line-height: 1.1;
         }
 
+        /* PDF/Print Fallbacks */
+        @media print {
+            .cover h1 {
+                background: none !important;
+                -webkit-text-fill-color: var(--text-dark) !important;
+                color: var(--text-dark) !important;
+                background-clip: unset !important;
+            }
+            .spec-item {
+                backdrop-filter: none !important;
+                background: rgba(0, 0, 0, 0.05) !important;
+            }
+            .spec-label {
+                opacity: 1 !important;
+                color: #666 !important;
+            }
+            .spec-value {
+                opacity: 1 !important;
+                color: var(--text-dark) !important;
+            }
+            .download-fab, .download-fab svg {
+                display: none !important;
+                visibility: hidden !important;
+                width: 0 !important;
+                height: 0 !important;
+            }
+        }
+
         .cover .subtitle {
             font-size: 25px;
             font-weight: 300;
@@ -888,6 +916,11 @@
         ::-webkit-scrollbar-track { background: #050510; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #555; }
+    </style>
+    <style>
+        @media print {
+            .download-fab { display: none !important; }
+        }
     </style>
 </head>
 
@@ -1653,8 +1686,8 @@
     </div>
 
     <!-- Floating Download PDF Button (screen only) -->
-    <a class="download-fab" href="20260323_Vintrof_LightCatalogue_v1.0.pdf" download>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
+    <a class="download-fab" href="20260323_Vintrof_LightCatalogue_v1.0.pdf" download style="display: flex;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
         Download PDF
     </a>
 

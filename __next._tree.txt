@@ -13,4 +13,4 @@
 :HL["/vintrof-catalogue-2026/assets/products/dried_papaya.png","image"]
 :HL["/vintrof-catalogue-2026/assets/products/fruit_juice_concentrate.png","image"]
 :HL["/vintrof-catalogue-2026/assets/images/logistics_cargo.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"kCyMI1xGM7GcMhBnfr2ys"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"M5_XDLnx9ento_pXmtp-2"}
